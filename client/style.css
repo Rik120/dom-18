@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+}
+
+.btn-12 {
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+.btn-12 span {
+    background: rgb(0, 172, 238);
+    background: linear-gradient(0deg, rgba(0, 172, 238, 1) 0%, rgba(2, 126, 251, 1) 100%);
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.btn-12 span:nth-child(1) {
+    box-shadow:
+        -7px -7px 20px 0px #fff9,
+        -4px -4px 5px 0px #fff9,
+        7px 7px 20px 0px #0002,
+        4px 4px 5px 0px #0001;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12 span:nth-child(2) {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: 50% 50% -20px;
+    -moz-transform-origin: 50% 50% -20px;
+    transform-origin: 50% 50% -20px;
+}
+
+.btn-12:hover span:nth-child(1) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.btn-12:hover span:nth-child(2) {
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    color: transparent;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.conteiner {
+    width: 80%;
+    height: fit-content;
+    margin: 86px auto;
+}
+
+.fon {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.242);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.info_box {
+    display: none;
+    position: absolute;
+    width: 732px;
+    height: fit-content;
+    transform: translate(-50%, -50%) scale(0.01);
+    background-color: white;
+    left: 50%;
+    top: 500%;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: 31;
+    padding: 56px 97px;
+
+}
+
+.info_box h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    margin-bottom: 32px;
+}
+
+.creat {
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    box-shadow: none;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    -webkit-perspective: 230px;
+    perspective: 230px;
+}
+
+.add_element {
+    width: 100%;
+    height: 56px;
+    background-color: #0047FF;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+
+}
+
+.close_info_box {
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+}
+
+.info h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+
+}
+
+.info_form label select {
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+    padding: 0 10px;
+}
+
+.info_form input {
+    all: unset;
+    width: 96%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+    padding: 0 10px;
+}
+
+.edit_img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    margin-top: 38px;
+}
+
+.create_cont {
+    width: 100%;
+    height: fit-content;
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    transition: 0.3s;
+}
+
+.table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: collapse;
+
+}
+
+.table tr {
+    width: 100%;
+    border-bottom: 1px solid #D5D7E4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+
+}
+
+.table th {
+    margin-left: 40px;
+    text-align: start;
+    color: #949494;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.table td {
+    max-width: 500px;
+    margin-left: 40px;
+    padding: 10px 30px 20px 0;
+
+}
+
+.vid {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #979797;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.active {
+    color: #007FFF;
+}
+
+.option {
+    color: #949494;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+
+}
+
+.box {
+    width: 380px;
+    height: max-content;
+    padding: 24px;
+    text-align: start;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.inline_box {
+    display: flex;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+
+}
+
+.description {
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #A5A5B4;
+    margin-top: 11px;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    margin: 16px 0;
+}
+
+.time {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    margin: 16px 0 16px 26px;
+
+}
+
+
+
+.edit_box {
+    display: none;
+    position: fixed;
+    width: 732px;
+    height: fit-content;
+    transform: translate(-50%, -50%) scale(0.01);
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: 31;
+    padding: 56px 97px;
+
+}
+
+.edit_form label select {
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+    padding: 0 10px;
+}
+
+.edit_form input {
+    all: unset;
+    width: 96%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+    padding: 0 10px;
+
+}
+
+.edit_bts {
+    width: 100%;
+    height: 56px;
+    background-color: #0047FF;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+
+}
+
+.edit_delete_bts {
+    width: 100%;
+    height: 56px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+
+}
+
+.edit_close_bts {
+    width: 100%;
+    height: 56px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-top: 8px;
+}
+
+.edit_img_plitka {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}

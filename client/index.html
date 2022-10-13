@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+</head>
+
+<body>
+
+    <div class="fon"></div>
+
+    <div class="conteiner">
+
+        <div class="info">
+
+            <h1>Dashboard</h1>
+
+            <button class="creat custom-btn btn-12">
+
+                <span>
+                    Задачу
+                </span>
+
+                <span>
+                    Создать
+                </span>
+
+            </button>
+
+            <div class="info_box">
+
+                <h1>Добавить значение</h1>
+
+                <form class="info_form" name="info_form">
+
+                    <input type="text" name="title">
+
+                    <input type="text" name="description">
+
+                    <input type="text" name="date">
+
+                    <input type="text" name="time">
+
+                    <label for="option">
+
+                        <select name="option" id="option">
+
+                            <option value="undone">Не выполнено</option>
+
+                            <option value="done">Готово</option>
+
+                            <option value="loading">В прогрессе</option>
+
+                        </select>
+
+                    </label>
+
+                    <button class="add_element">Создать</button>
+                </form>
+
+                <button class="close_info_box">Закрыть</button>
+
+            </div>
+
+        </div>
+
+        <p class="text">Показать задачи как: <span class="vid active">Таблица</span> <span class="vid">Плитка</span></p>
+
+        <div class="create_cont"></div>
+
+        <div class="edit_box">
+
+            <h1>Изменить</h1>
+
+            <form class="edit_form" name="edit_form">
+
+                <input type="text" id="title" name="title">
+
+                <input type="text" id="description" name="description">
+
+                <input type="text" id="date" name="date">
+
+                <input type="text" id="time" name="time">
+
+                <label for="option">
+
+                    <select name="option" id="option">
+
+                        <option value="done">Готово</option>
+
+                        <option value="loading">В прогрессе</option>
+
+                        <option value="undone">Не выполнено</option>
+
+                    </select>
+
+                </label>
+
+                <button class="edit_bts">Изменить</button>
+
+            </form>
+
+            <button class="edit_delete_bts">
+
+                Удалить
+
+            </button>
+
+            <button class="edit_close_bts">Закрыть</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
